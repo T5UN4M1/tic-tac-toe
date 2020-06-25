@@ -6,10 +6,12 @@ import {ticTacToeService} from "../services/tic-tac-toe-service";
 export const TicTacToeGame = () => {
     const [grid, setGrid] = useState(ticTacToeService.getEmptyGrid);
 
-    const handleClick = (id: number) => setGrid(grid.map(
-        (cell, i) => (i !== id || cell !== Symbols.e) ? cell : ticTacToeService.getNextSymbol(grid)));
+    const handleClick = (id: number) => setGrid(grid.map((cell, i) =>
+        (i !== id || cell !== Symbols.e || winner !== null) ? cell : ticTacToeService.getNextSymbol(grid)));
 
     const winner = ticTacToeService.determineWinner(grid);
+
+
     const WinnerAnnounce = () => (winner !== null) ? <p>{winner} has won the game</p>:null;
     
     return (
