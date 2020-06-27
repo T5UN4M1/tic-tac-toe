@@ -19,10 +19,14 @@
   },
   "homepage": "https://github.com/T5UN4M1/tic-tac-toe#readme",
   "dependencies": {
+    "@types/node": "^14.0.14",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "http": "0.0.1-security",
     "log4js": "^6.3.0",
     "morgan": "^1.10.0",
-    "typescript": "^3.9.5"
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.5",
+    "ws": "^7.3.0"
   }
 }
