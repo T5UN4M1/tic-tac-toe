@@ -24,7 +24,8 @@ app.use(morganLogger);
 
 const wss = new WebSocket.Server({ server });
 
-server.listen(port, () => logger.info(`server started at http://localhost:${port}`));
+const servPort = process.env.PORT || port;
+server.listen(servPort, () => logger.info(`server started at http://localhost:${servPort}`));
 
 
 export {app};
